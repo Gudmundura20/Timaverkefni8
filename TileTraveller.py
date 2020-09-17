@@ -49,28 +49,34 @@ def get_dir(n, s, a, v):   # Ef sett er inn n, s, a, v
         game_end() # exits program
     print (beiðni + ".")  # breytan efst + leyfðar áttir á ensku skv mimir output
     
-def move_direction(n, s, v, a):
-    '''Hreyfing eftir input færir position x,y í nýjann ramma'''
-    n = y + 1 
-    s = y - 1
-    v = x - 1
-    a = x + 1
-    return y, x
-    
 # notandi gefur input fyrir áttirnar
 def move_direction_input(n, s, a, v):
     n = input("n ")
     s = input("s ")
     a = input("e ")
     v = input("v ")
-    return move_direction(n, s, v, a)
- 
-while (x != 3 and y != 1):
-    get_dir(n, s, a, v) # Hvaða áttir eru í boði
-    move_direction_input(n, s, a, v) # notandi velur átt
-    move_direction(n, a, s, v) # notandi færist
+    return direction_func(n, s, v, a)
+    
+def direction_func(n, s, v, a):
+    '''Hreyfing eftir input færir position x,y í nýjann ramma'''
+    if move_direction_input(n): 
+        n = y += 1
+    if move_direction_input(s):
+        s = y -= 1
+    if move_direction_input(a):
+        a = x += 1
+    if move_direction_input(v):
+        v = -= 1
+    return x, y
+    
 
-# test 1 ekkert gerist
+ 
+
+get_dir(n, s, a, v) # Hvaða áttir eru í boði
+move_direction_input(n, s, a, v) # notandi velur átt
+direction_func(n, a, s, v) # notandi færist
+
+
 
 
 
