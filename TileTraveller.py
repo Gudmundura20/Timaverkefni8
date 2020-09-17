@@ -6,43 +6,60 @@
 # Föllin eiga við hnitakerfi (x,y) svo þau taka x og y arguments
 # grid = 3x, 3y
 # lentum í github veseni í klukkutíma
-import math
-def move_(y):
-    y += 1
-    y -= 1
-    return (beiðni)
-def
-    
+x = 1
+y = 1
 
+def move_direction():
+    n = input(" n ")
+    s = input(" s ")
+    e = input(" e ")
+    v = input(" v ")
+
+def move_direction(n, s, v, e):
+    return n = y + 1
+    return s = y - 1
+    return v = x - 1
+    return e = x + 1
+
+
+
+
+def get_move_y():
+    n = move_y(n)
+    s = move_y(s)
+    return y
+def get_move_x():
+    v = move_x(v)
+    e = move_x(e)
+    return x
+
+    
+    
     
 def get_dir(n, s, a, v):
     ''' skilaboð til notanda um leifðar áttir'''
         beiðni = "Þú getur farið til: "
-        if pos_x == 1 and pos_y == 1:
+        if x == 1 and y == 1:
             beiðni += "(N)orth"
-        if pos_x == 1 and pos_y == 2:
+        if x == 1 and y == 2:
             beiðni += "(N)orth" or "(E)ast" or "(W)est"
-        if pos_x == 1 and pos_y == 3:
+        if x == 1 and y == 3:
             beiðni += "(E)ast" or "(W)est"
-        if pos_x == 2 and pos_y == 3:
+        if x == 2 and y == 3:
             beiðni += "(E)ast" or "(W)est"
-        if pos_x == 3 and pos_y == 3:
+        if x == 3 and y == 3:
             beiðni += "(W)est" or "(S)outh"
-        if pos_x == 3 and pos_y == 2:
+        if x == 3 and y == 2:
             beiðni += "(N)orth" or "(S)outh"
-        if pos_x == 3 and pos_y == 1:
+        if x == 3 and y == 1:
             beiðni += "Victory!"
-        if pos_x == 2 and pos_y == 2:
+        if x == 2 and y == 2:
             beiðni += "(W)est" or "(S)outh"
-        if pos_x == 2 and pos_y == 1:
+        if x == 2 and y == 1:
             beiðni += "(N)orth"
     print (beiðni + ".")
         
 
-n = y +1
-s = y -1
-e = x +1
-v = x -1
 
 
 # íhuga func sem tekur input, biðja um dir og túlka það
