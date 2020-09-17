@@ -24,19 +24,15 @@ def move_direction(n, s, v, e):
 
 
 
-def get_move_y():
-    n = move_y(n)
-    s = move_y(s)
-    return y
-def get_move_x():
-    v = move_x(v)
-    e = move_x(e)
-    return x
+#def tiles(): WIP
+ #   n = move_y(n)
+  #  s = move_y(s)
+   # return y
 
     
     
     
-def get_dir(n, s, a, v):
+def get_dir(n, s, a, v):   # ef sett er inn n, s, a, v fær notandi skilaboð
     ''' skilaboð til notanda um leifðar áttir'''
         beiðni = "Þú getur farið til: "
         if x == 1 and y == 1:
@@ -57,7 +53,7 @@ def get_dir(n, s, a, v):
             beiðni += "(W)est" or "(S)outh"
         if x == 2 and y == 1:
             beiðni += "(N)orth"
-    print (beiðni + ".")
+    print (beiðni + ".")  # breytan efst + leifðar áttir 
         
 
 
