@@ -9,17 +9,21 @@
 x = 1
 y = 1
 
+# notandi gefur input fyrir áttirnar
 def move_direction():
     n = input(" n ")
     s = input(" s ")
     e = input(" e ")
     v = input(" v ")
 
+
 def move_direction(n, s, v, e):
-    return n = y + 1
-    return s = y - 1
-    return v = x - 1
-    return e = x + 1
+    '''Hreyfing eftir input færir position x,y í nýjann ramma'''
+    n = y + 1
+    s = y - 1
+    v = x - 1
+    e = x + 1
+    return y, x
 
 
 
