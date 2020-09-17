@@ -4,7 +4,7 @@
 # Gerum fall fyrir hreyfingu á milli gólfflísa (for loop)
 # Gerum fall sem að gefur meldingu um að leikurinn hafi klárast (victory)
 # Föllin eiga við hnitakerfi (x,y) svo þau taka x og y arguments
-
+# Get ég núna pushað
 # grid = 3x, 3y
 import math
 def get_dir():
