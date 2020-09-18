@@ -16,7 +16,7 @@
 
 def game_end():
     '''exit program with built in func exit()'''
-    exit()
+    return exit()
 # fastar a, v = austur, vestur
 def get_directions(n, s, a, v):   # Ef sett er inn n, s, a, v
     '''skilaboð til notanda um leyfðar áttir'''
@@ -43,58 +43,34 @@ def get_directions(n, s, a, v):   # Ef sett er inn n, s, a, v
     print (beiðni + ".")  # breytan efst + leyfðar áttir á ensku skv mimir output
     
 def direction_direct(n, s, a, v):
-    '''Notandi stýrir áttum'''
+    '''Notandi stýrir í átt'''
     direction = input("Direction: ")
-    if input == 'n':
-        'n' == 'N'
-    if input == 's':
-        's' == 'S'
-    if input == 's':
-        'a' == 'A'
-    if input == 's':
-        'v' == 'V'
     return direction
     
 def direction_direct_func(direction, x, y):
     '''Hreyfing eftir input færir position x,y í nýja flís'''
-    for direction in direction_direct(n, s, a, v):
-        n = y +1
-    
-        s = y -1
+    for direction in direction_direct(n, s, a, v): # iterates the input from direction_direct() for these statements
+        if direction == 'n':  
+            y += 1
+        elif direction == 's':
+            y -= 1
+        
+        elif direction == 'a':
+            x += 1
+        elif direction == 'v':
+            x -= 1
+        
+    return (x, y)
 
-        a = x +1
-
-        v = x -1
-        return x, y
-      
+# Start of program  
 x = 1
 y = 1
-n = 1
-s = 1
-a = 1
-v = 1
+n = 'n'
+s = 's'
+a = 'a'
+v = 'v'
 
-while x != 3 and y != 1:
-    get_directions(n, s, a, v) # Hvaða áttir eru í boði
-    direction_direct(n, s, a, v) # notandi velur átt
-    direction_direct_func(direction, x, y) # notandi færist
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-
-        
-
-
+#while x != 3 and y != 1:
+get_directions(n, s, a, v) # Hvaða áttir eru í boði
+direction_direct(n, s, a, v) # notandi velur átt
+direction_direct_func(direction, x, y)#undefined :direction, x, y) # notandi færist
