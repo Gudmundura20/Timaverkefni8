@@ -12,14 +12,7 @@
 
 # lentum í github veseni í klukkutíma sagðir okkur að setja þetta komment
 # https://github.com/Gudmundura20/Timaverkefni8
-x = 1
-y = 1
 
-n = 1
-s = 1
-a = 1
-v = 1
-# Gerir allar breyturnar að integers
 
 def game_end():
     '''exit program with built in func exit()'''
@@ -55,26 +48,32 @@ def move_direction_input(n, s, a, v):
     s = input("s ")
     a = input("e ")
     v = input("v ")
-    return direction_func(n, s, v, a)
+    return direction_func(n, s, a, v)
     
-def direction_func(n, s, v, a):
+def direction_func(n, s, a, v):
     '''Hreyfing eftir input færir position x,y í nýjann ramma'''
-    if move_direction_input(n): 
-        n = y += 1
-    if move_direction_input(s):
-        s = y -= 1
-    if move_direction_input(a):
-        a = x += 1
-    if move_direction_input(v):
-        v = -= 1
-    return x, y
+    n = y +1
     
+    s = y -1
 
- 
+    a = x +1
 
-get_dir(n, s, a, v) # Hvaða áttir eru í boði
-move_direction_input(n, s, a, v) # notandi velur átt
-direction_func(n, a, s, v) # notandi færist
+    v = x -1
+    return x, y
+      
+x = 1
+y = 1
+n = 1
+s = 1
+a = 1
+v = 1
+
+while x != 3 and y != 1:
+    get_dir(n, s, a, v) # Hvaða áttir eru í boði
+    move_direction_input(n, s, a, v) # notandi velur átt
+    direction_func(n, s, a, v) # notandi færist
+
+
 
 
 
