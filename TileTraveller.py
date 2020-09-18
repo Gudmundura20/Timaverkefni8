@@ -8,15 +8,16 @@
 # grid = 3x, 3y
 
 # íhuga func sem tekur input, biðja um dir og túlka það
-# func sem túlkar gildar áttir frá staðsetningu
+# func sem túlkar gildar áttir frá staðsetningu :WIP
 
-# lentum í github veseni í klukkutíma sagðir okkur að setja þetta komment
+# lentum í github veseni, sagðir okkur að setja þetta komment
 # https://github.com/Gudmundura20/Timaverkefni8
 
 
 def game_end():
     '''exit program with built in func exit()'''
     return exit()
+
 # fastar a, v = austur, vestur
 def get_directions(n, s, a, v):   # Ef sett er inn n, s, a, v
     '''skilaboð til notanda um leyfðar áttir'''
@@ -59,7 +60,9 @@ def direction_direct_func(direction, x, y):
             x += 1
         elif direction == 'v':
             x -= 1
-        
+        if direction.isupper() == True:
+            direction.islower() == direction.isupper()
+            
     return (x, y)
 
 # Start of program  
@@ -70,7 +73,7 @@ s = 's'
 a = 'a'
 v = 'v'
 
-#while x != 3 and y != 1:
-get_directions(n, s, a, v) # Hvaða áttir eru í boði
-direction_direct(n, s, a, v) # notandi velur átt
-direction_direct_func(direction, x, y)#undefined :direction, x, y) # notandi færist
+while x != 3 and y != 1:
+    get_directions(n, s, a, v) # Hvaða áttir eru í boði
+    direction_direct(n, s, a, v) # notandi velur átt
+    direction_direct_func(direction, x, y)
